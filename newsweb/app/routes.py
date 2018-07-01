@@ -1,10 +1,11 @@
 from flask import render_template, redirect, url_for
 from app import app
-from news_api import NewsApi
+from app import news_api
 
+@app.route('/home')
 @app.route('/')
 def index():
-	news = NewsApi()
+	news = news_api.NewsApi()
 	descriptions = news.get_discription()
 	urls = news.get_url()
 	images = news.get_image_link()

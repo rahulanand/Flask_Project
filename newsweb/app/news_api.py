@@ -15,7 +15,7 @@ class NewsApi(object):
 		url.append(article['url'])
 		image_link.append(article['urlToImage'])
 		title.append(article['title'])
-
+	
 	def get_discription(self):
 		return self.description
 
