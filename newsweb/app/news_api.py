@@ -2,7 +2,7 @@ from newsapi import NewsApiClient
 
 
 class NewsApi(object):
-	newsapi = NewsApiClient(api_key='b3fd0106d80644ad8385e25ddd10aef6')
+	newsapi = NewsApiClient(api_key='API_KEY')
 	top_headlines = newsapi.get_top_headlines(country='in')
 	
 	description = []
