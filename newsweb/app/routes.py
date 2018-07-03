@@ -5,12 +5,12 @@ from app import news_api
 @app.route('/home')
 @app.route('/')
 def index():
-	news = news_api.NewsApi()
-	descriptions = news.get_discription()
+	news = news_api.NewsApi(None)
+	descriptions = news.get_description()
 	urls = news.get_url()
-	images = news.get_image_link()
+	images = news.get_images()
 	title = news.get_title()
-	sources = news.get_source()
+	sources = news.get_sources()
 
 	n = len(descriptions)
 	return render_template('index.html',title='News Web', descriptions=descriptions, urls=urls, images=images,length=n, get_title=title,sources=sources)
